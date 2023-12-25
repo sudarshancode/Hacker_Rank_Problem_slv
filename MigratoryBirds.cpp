@@ -12,7 +12,28 @@ vector<string> split(const string &);
  * The function is expected to return an INTEGER.
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
+/*
+    //Optimal Solution
+    vector<int> freq(6, 0); // Assuming bird types are in the range 1 to 5
 
+    // Count frequency of each bird type
+    for (int bird : arr) {
+        freq[bird]++;
+    }
+
+    int maxCount = 0;
+    int mostCommonBird = -1;
+
+    // Find the most common bird type
+    for (int i = 1; i <= 5; i++) {
+        if (freq[i] > maxCount) {
+            maxCount = freq[i];
+            mostCommonBird = i;
+        }
+    }
+
+    return mostCommonBird;
+*/
 int migratoryBirds(vector<int> arr) {
     int f;
     int i=0;
